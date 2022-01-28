@@ -1,0 +1,51 @@
+.row.content {height: 550px}
+    
+    /* Set gray background color and 125% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 125%;
+
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    .well
+    {
+      width: 100%;
+    }
+    #dashboard-head
+    {
+     padding-top: 2rem;
+    }
+    #Dashboard
+    {
+      padding-top: 2rem;
+    }
+      #Statistics
+    {
+      padding-left: 4rem;
+    }
+    body
+    {
+      /*background-image: linear-gradient(
+    to right,
+    #baf3d7,
+    #c2f5de,
+    #cbf7e4,
+    #d4f8ea,
+    #ddfaef
+  )*/
+  /* background: linear-gradient(to right, #EC6EAD, #3494E6);;;
+    }*/
+    #st
+    {
+      height: 100%;
+      width: 150px;
+    }
+    /*#stat
+    {
+      height: 100%;
+      width: 910px;
+    }*/
