@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title></title>
+	<style type="text/css">
+		.error{
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+
+<form id="form">
+
+<label> Name:</label><input type="text" name="name" id="name">
+<span class="error" id="name_err"></span><br><br>
+
+<label> Email:</label>
+<input type="email" name="email" id="email">
+<span class="error" id="email_err"></span><br><br>
+
+<label>Phone No:</label>
+<input type="number" name="phone" id="phone">
+<span class="error" id="phone_err"></span><br><br>
+
+<label>Password:</label>
+<input type="Password" name="Password" id="password">
+<span class="error" id="password_err"></span><br><br>
+
+<label>Pincode:</label>
+<input type="number" name="Pincode" id="pincode">
+<span class="error" id="pincode_err"></span><br><br>
+
+<button type="submit">Submit</button>
+</form> 
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#form").submit(function(){
+		var name = $("#name").val();
+	    var email=$("#email").val();
+	    var phone=$("#phone").val().toString();
+        var password=$("#password").val().toString();
+        var pincode=$("#pincode").val().toString();
+
+       
+
+
+        
+     
+	    $("#name_err").text('');
+	    $("#email_err").text('');
+	    $("#phone_err").text('');
+	    $("#password_err").text('');
+	    $("#pincode_err").text('');
+
+        if(name == "")
+        {
+        	$("#name_err").text("This Field is required");
+        	return false;
+        }
+        
+        if(email == "")
+        {
+        	$("#email_err").text("This Field is required");
+            return false;
+        }
+
+        if(phone == "")
+        {
+        	$("#phone_err").text("This Field is required");
+        	return false;
+        }
+        else 
+        {
+        	if(phone.length==10)
+        	{
+        		
+        	}
+        	else
+        	{
+        		$("#phone_err").text("Phone No must be 10 digit");
+        		return false;
+        	}
+        }
+
+        if(password == "")
+        {
+        	$("#password_err").text("This Field is required");
+        	return false;
+        }
+        else
+        {
+        	if(password.length>=8)
+        	{
+        		
+        	}
+        	else
+        	{
+        		$("#password_err").text("password should be minimum 8 digits");
+        	    return false;
+        	}
+
+        }
+
+
+       
+       
+        if(pincode == "")
+        {
+        	$("#pincode_err").text("This Field is required");
+        	return false;
+        }
+        else
+        {
+        	if(pincode.length == 6)
+        	{
+
+        	}
+        	else
+        	{
+        		$("#pincode_err").text("pincode should be 6 digits");
+        	    return false;
+        	}
+
+        }
+
+	});
+});
+
+	
+</script>
+</body>
+</html>

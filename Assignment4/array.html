@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h3> Array methods</h3>
+
+	<h4>var fruits=["Banana","Orange","Apple","Mango"]</h4>
+	<hr>
+
+<div>
+	<h4>toString()</h4>
+	<p id="tostring"></p>
+</div>
+<hr>
+
+<div>
+	<h4>Join</h4>
+	<p id="join"></p>
+</div>
+<hr>
+
+<div>
+	<h4>Pop</h4>
+	<p id="pop"></p>
+</div>
+<hr>
+
+<div>
+	<h4>Push</h4>
+	<p id="push"></p>
+</div>
+<hr>
+
+<div>
+	<h4>Shift</h4>
+	<p id="shift"></p>
+</div>
+<hr>
+
+<div>
+	<h4>unShift</h4>
+	<p id="unshift"></p>
+</div>
+<hr>
+
+<div>
+	<h4>Length</h4>
+	<p id="length"></p>
+</div>
+<hr>
+
+<div>
+	<h4>Concat</h4>
+	var fruits=["Banana","Orange","Apple","Mango"];<br>
+	var cars=["BMW","Audi"];
+	<p id="concat"></p>
+</div>
+<hr>
+<script type="text/javascript">
+	var fruits=["Banana","Orange","Apple","Mango"];
+	var cars=["BMW","Audi"];
+	var fruits1=fruits.toString();
+	
+	
+
+	document.getElementById("tostring").innerHTML=fruits;
+	document.getElementById("join").innerHTML=fruits.join("*");
+
+	fruits.pop();
+	document.getElementById("pop").innerHTML=fruits;
+
+	fruits.push("Mango");
+	document.getElementById("push").innerHTML=fruits;
+
+	fruits.shift();
+	document.getElementById("shift").innerHTML=fruits;
+
+	fruits.unshift("Banana");
+	document.getElementById("unshift").innerHTML=fruits;
+
+	document.getElementById("length").innerHTML=fruits.length;
+
+	document.getElementById("concat").innerHTML=fruits.concat(cars);
+
+</script>
+</body>
+</html>

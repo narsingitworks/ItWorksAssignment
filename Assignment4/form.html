@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+
+<label>Enter Name</label>	
+<input type="text" name="" id="name"> <button onclick="displayName()">try it</button>
+<p id="display_name"></p>
+
+<hr>
+
+
+
+<label>Address</label>
+<textarea id="address"></textarea> <button onclick="displayAddress()">try it</button>
+<p id="display_address"></p>
+<hr>
+
+
+<label>Choose Language</label>
+<select id="mySelect" multiple="multiple" onchange="myFunction(this, event)" >
+      <option value="HTML">HTML
+      <option value="CSS">CSS
+      <option value="javascript">JavaScript
+      <option value="PHP">PHP
+    </select>
+   <h4>You Selected</h4>
+    <ul id="JSResult">
+    </ul>
+<hr>
+
+
+<h4>When you are free?</h4>
+<label><input type="checkbox" name="day" value="Monday" class="checkBoxClass">Monday 
+</label>
+
+<label><input type="checkbox" name="day" value="Tuesday" class="checkBoxClass">Tuesday 
+</label>
+
+<label><input type="checkbox" name="day" value="Wednesday" class="checkBoxClass">wednesday 
+</label>
+
+<label><input type="checkbox" name="day" value="Thurday" class="checkBoxClass">Thursday 
+</label>
+
+<label><input type="checkbox" name="day" value="Friday" class="checkBoxClass">Friday 
+</label>
+
+<label><input type="checkbox" name="day" value="Saturday" class="checkBoxClass">Saturday 
+</label>
+
+<label><input type="checkbox" name="day" value="Sunday" class="checkBoxClass">Sunday 
+</label>
+<br><br>
+
+
+<input type="checkbox" id="CheckAll" />SelectAll
+<p>
+        <button id="get-selected">Get Selected Days</button>
+</p>
+
+<p id="selected"></p>
+<hr>
+
+
+<h4>Please select your gender.</h4>
+<p>
+    <label><input type="radio" name="gender" value="male">Male</label> 
+    <label><input type="radio" name="gender" value="female">Female</label>
+</p>
+<p><input type="button" value="Get Value"></p>
+<p id="radio"></p>
+<hr>
+
+
+<label>Enter Name</label>	
+<input type="text" name="" id="name2"> 
+<p id="display_name2"></p>
+
+
+<script type="text/javascript">
+
+ 
+
+	function displayName()
+	{
+	document.getElementById("display_name").innerHTML=document.getElementById("name").value;
+    }
+
+    function displayAddress()
+    {
+    	document.getElementById("display_address").innerHTML=document.getElementById("address").value;
+    }
+
+    
+
+    function myFunction(element, event)
+{
+  var result = document.getElementById('JSResult');
+  while(result.firstChild)
+   result.removeChild(result.firstChild);
+ 
+  for (var i = 0; i < element.options.length; i++) {
+    if (element.options[i].selected) {
+      var li = document.createElement('li');
+      li.appendChild(document.createTextNode(element.options[i].value));
+      result.appendChild(li);
+    }
+  }
+}
+
+
+
+
+
+$(function() {
+	$("#get-selected").click(function() 
+	{
+		var free=[];
+		$.each($("input:checkbox[name='day']:checked"),function() {
+			free.push($(this).val());
+		});
+		if(free.length>0)
+		{
+    document.getElementById("selected").innerHTML="We will free on:"+free.join(",");
+    }
+    else
+    {
+    	document.getElementById("selected").innerHTML="please select at least one";
+    }
+	})
+});
+
+
+$("input[type='button']").click(function()
+{
+	var radioValue=$("input[name='gender']:checked").val();
+	if(radioValue)
+	{
+    document.getElementById("radio").innerHTML="You are a-"+radioValue;
+	}
+})
+
+
+ $("input").keyup(function()
+  {
+  	document.getElementById("display_name2").innerHTML=$("#name2").val();
+  })
+
+
+$("#CheckAll").click(function () {
+            $(".checkBoxClass").attr('checked', this.checked);
+        });
+
+</script>
+</body>
+</html>

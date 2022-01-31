@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h2>String Methods</h2>
+<h3>var txt="Hello"</h3>
+<hr>
+
+<div>
+	<h3>Length</h3>
+	<p id="length"></p>
+</div>
+<hr>
+
+<div>
+	<h3>Slice</h3>
+	var str = "Apple, Banana, Kiwi";
+	<p id="slice"></p>
+</div>
+<hr>
+
+<div>
+	<h3>Substring</h3>
+	var txt="Hello"
+	<p id="substring"></p>
+</div>
+<hr>
+
+<div>
+	<h3>substr</h3>
+	var str = "Apple, Banana, Kiwi";<br>
+	str.substr(7,6);
+	<p id="substr"></p>
+</div>
+<hr>
+
+<div>
+	<h3>replace</h3>
+	var str = "Apple, Banana, Kiwi";<br>
+	str.replace("Apple",Mango)<br>
+	<p id="replace"></p>
+</div>
+<hr>
+
+<div>
+	<h3>toUpperCase()</h3>
+	var txt="Hello";
+	<p id="upper"></p>
+</div>
+<hr>
+
+<div>
+	<h3>toLowerCase()</h3>
+	var txt="HELLO";
+	<p id="lower"></p>
+</div>
+<hr>
+
+
+<div>
+	<h3>concat()</h3>
+	var txt1="Hello";<br>
+	var txt2="World";
+	<p id="concat"></p>
+</div>
+<hr>
+
+<div>
+	<h3>trim()</h3>
+	var txt="        Hello!     ";<br>
+	
+	<p id="trim"></p>
+</div>
+<hr>
+
+<div>
+	<h3>charAt()</h3>
+	var txt="Hello!";<br>
+	txt.charAt(0);
+	<p id="charat"></p>
+</div>
+<hr>
+
+<div>
+	<h3>charCodeAt()</h3>
+	var txt="Hello!";<br>
+	txt.charCOdeAt(0);
+	<p id="charcodeat"></p>
+</div>
+<hr>
+
+<script type="text/javascript">
+	var txt="Hello";
+	var str = "Apple, Banana, Kiwi";
+	var txt1="HELLO";
+	var txt2="World";
+	var txt3="         Hello!      ";
+
+	document.getElementById("length").innerHTML=txt.length;
+	document.getElementById("slice").innerHTML=str.slice(7,13);
+	document.getElementById("substring").innerHTML=txt.substring(0,3);
+	document.getElementById("substr").innerHTML=str.substr(7,6);
+	document.getElementById("replace").innerHTML=str.replace("Apple","Mango");
+	document.getElementById("upper").innerHTML=txt.toUpperCase();
+	document.getElementById("lower").innerHTML=txt1.toLowerCase();
+	document.getElementById("concat").innerHTML=txt.concat(" ",txt2);
+	document.getElementById("trim").innerHTML=txt3.trim();
+	document.getElementById("charat").innerHTML=txt.charAt(0);
+	document.getElementById("charcodeat").innerHTML=txt.charCodeAt(0);
+</script>
+</body>
+</html>
