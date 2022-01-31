@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+	<h3>Focus and Blur Event</h3>
+	Name:<input type="text" name="fullname"><br>
+	Email:<input type="email" name="email"><br>
+</div>
+<hr>
+
+<div>
+	<h3>Click Event</h3>
+	<p>Click me!</p>
+</div>
+<hr>
+
+<div>
+	<h3>mouseenter()</h3>
+	<p id="mouseenter">Enter mouse here</p>
+</div>
+<hr>
+
+<!-- <div>
+	<h3>mouseleave()</h3>
+	<p id="mouseleave">MouseLeave Demo</p>
+</div>
+<hr> -->
+
+<div>
+	<h3>hover()</h3>
+	<p id="hover">hover mouse here</p>
+</div>
+<hr>
+
+<div>
+	<h3>On()</h3>
+	<p id="on">Demo of on method</p>
+</div>
+<hr>
+
+<script type="text/javascript">
+	
+	$("input").focus(function(){
+		$(this).css("background-color","yellow");
+	});
+
+	$("input").blur(function()
+	{
+		$(this).css("background-color","green");
+	})
+
+	$("p").click(function()
+	{
+		$(this).hide();
+	})
+
+	/*$("#mouseenter").mouseenter(function()
+	{
+		alert("You entered here");
+	})*/
+
+	/*$("#mouseleave").mouseleave(function()
+	{
+		alert("You leave mouse");
+	})*/
+ 	
+ 	/*$("#hover").hover(function()
+ 	{
+ 		alert("you hovered");
+ 	})*/
+
+ 	$("#on").on({
+ 		mouseenter: function(){
+ 			$(this).css("background-color","lightgray");
+ 		},
+ 		mouseleave:function(){
+ 			$(this).css("background-color","lightblue");
+ 		},
+ 		
+ 	});
+
+
+
+</script>
+</body>
+</html>
